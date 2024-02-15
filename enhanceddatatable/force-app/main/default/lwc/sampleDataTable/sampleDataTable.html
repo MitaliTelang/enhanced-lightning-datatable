@@ -1,0 +1,18 @@
+<template>
+    <div>
+        <c-custom-data-table-template 
+                                columns={appColumns} 
+                                source={allRecords} 
+                                hidecheckboxcolumn={hideCheckbox} 
+                                maxrowselection={allcolumnslen} 
+                                sorteddirection={sorteddirection} 
+                                sortedby={sortedby} 
+                                defaultsortdirection={defaultsortdirection}
+                                ongetselectedrows={getselectedrowsevent}
+                                allsource={allRecordsPage}
+                                apppagesize={appPageSize}
+                                pagination={pagination}
+                                onsortalldata={realignrecords}> 
+        </c-custom-data-table-template> 
+    </div>
+</template>
