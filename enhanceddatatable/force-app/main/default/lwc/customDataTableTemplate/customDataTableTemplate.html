@@ -1,0 +1,40 @@
+<template>
+	<div>
+		<div>
+			<div>
+				<lightning-datatable key-field="id" data={source} columns={columns} selected-rows={selectedRecord}
+					onrowselection={handleSelection} hide-table-header={hideHeader}
+					show-row-number-column={showrownumbercolumn} hide-checkbox-column={hidecheckboxcolumn}
+					max-row-selection={maxrowselection} default-sort-direction={defaultsortdirection}
+					sorted-direction={sorteddirection} sorted-by={sortedBy} onsort={onHandleSort}
+					resize-column-disabled>
+				</lightning-datatable>
+			</div>
+            <template if:true={pagination}>
+            <div class="slds-grid slds-wrap slds-m-bottom--medium" style="height: 5rem;">
+                <div class="slds-grid slds-m-bottom--large slds-m-top--large slds-size_12-of-12 slds-grid_align-spread">
+                    <div class="slds-grid">
+                        <div class="slds-p-right_x-small">
+                        <lightning-button disabled={appDisableFirst} icon-name="utility:jump_to_left" label="First" class="slds-p-horizontal_x-small" alternative-text="first page" onclick={appFirstPage} data-id="first2" variant="brand-outline"></lightning-button>
+                        </div>
+                        <div>
+                        <lightning-button disabled={appDisableFirst} icon-name="utility:chevronleft" label="Previous" alternative-text="Previous" onclick={appPreviousPage} data-id="prev2" variant="brand-outline"></lightning-button>
+                        </div>
+                    </div>
+                
+                    <div class="slds-grid"><span class="slds-badge">Showing {appPageNumber} &nbsp;of&nbsp; {appTotalPages} &nbsp;&nbsp;Page(s)</span></div>
+                
+                    <div class="slds-grid">
+                        <div class="slds-p-right_x-small">
+                        <lightning-button disabled={appDisableLast} icon-name="utility:chevronright" label="Next" alternative-text="Next" onclick={appNextPage} class="slds-p-horizontal_x-small" icon-position="right" data-id="next2" variant="brand-outline"></lightning-button>
+                        </div>
+                        <div>
+                        <lightning-button disabled={appDisableLast} icon-name="utility:jump_to_right" label="Last" alternative-text="last page" onclick={appLastPage} icon-position="right" data-id="last2" variant="brand-outline"></lightning-button>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            </template>
+		</div>
+	</div>
+</template>
