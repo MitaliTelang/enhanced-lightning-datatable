@@ -2,7 +2,7 @@
 
 Custom LWC for datatable with a reusable lightning datatable template
 
-This datatable template is a custom wrapper on Lightning datatable. This template also extend WSV specific Newport styling
+This datatable template is a custom wrapper on Lightning datatable.
 
 ## Functionalities:
 - Pagination
