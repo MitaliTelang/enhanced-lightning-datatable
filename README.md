@@ -44,4 +44,4 @@ This datatable template is a custom wrapper on Lightning datatable.
 
 
 In the parent LWC js file the inputs needed for the template need to be set up.
-The function to handle the onselect and onsort events need to be set up as well.
+The function to handle the onselect and onsort events needs to be set up as well.
